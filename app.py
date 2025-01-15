@@ -18,27 +18,27 @@ def buil_sandwich(ingredients):
         #Join all ingredients for a nice final message
         print(f"\nCongrats! You made a {' and '.join(ingredients)} sandwich!")
 
-    # Main function that handles use inputs and error catching 
-    def main():
-        try:
-            print("Welcome to the sandwich maker!")
+# Main function that handles use inputs and error catching 
+def main():
+    print("in main fucntion")
+    try:
+        print("Welcome to the sandwich maker!")
 
-            # Get ingredients from user as a commoa-separated string
-            ingredients_input =input("Enter ingredients (separated by commas): ")
+        # Get ingredients from user as a commoa-separated string
+        ingredients_input =input("Enter ingredients (separated by commas): ")
 
-            #Convert the input string to a list
-            #1. Split string at commas
-            #2. Remove extra whitespace from each ingredient
-            ingredients = [i.strip() for i in ingredients_input.split(",")]
+        #Convert the input string to a list
+        #1. Split string at commas
+        #2. Remove extra whitespace from each ingredient
+        ingredients = [i.strip() for i in ingredients_input.split(",")]
 
-            #Call the sandwich building function with our list of ingredients
-            buil_sandwich(ingredients)
+        #Call the sandwich building function with our list of ingredients
+        buil_sandwich(ingredients)
 
         # Catch any errors the happen during execution
-        except Exception as e:
-            print("Oops, something went wrong!@ Let's try again.");
+    except Exception as e:
+        print("Oops, something went wrong!@ Let's try again.");
 
-    # Standard Python ideion to only run the main function
-    if __name__ == "__main__":
-        main()
-        
+# Standard Python ideion to only run the main function
+if __name__ == "__main__":
+    main()
